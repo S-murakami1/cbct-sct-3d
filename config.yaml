@@ -1,0 +1,38 @@
+# Paths are relative to the repository root. Leave a field empty to skip it.
+# Patch size, batch size, epochs, and learning rate stay in the nnUNet trainer and plans.
+
+nrrd_src: data/nrrd  # nrrd_to_nifti.py --src
+work_prefix: data/work
+nnunet_raw: raw
+nnunet_preprocessed: preprocessed
+nnunet_results: results
+
+dataset_name: Head
+hu_clip: [-1000, 3000]  # CBCT and CT, and CTNormalization_clip. Changing this needs prepare again
+cbct_dataset_id: 93  # CT dataset is this id + 1
+teacher_dataset_id: 95
+
+cases: []  # empty = every pair. Example: [P001_1, P002_1]
+registration_qc_csv:  # CSV; drop cases with a non-empty registration column
+
+test_cases: []  # case ids for imagesTs. Empty keeps every case in imagesTr
+splits_json:  # empty = 5-fold patient split
+split_seed: 42
+
+region: HN  # elastix --region: HN (head and neck), TH (thorax), AB (abdomen)
+workers: 4
+threads_per_job: 4  # elastix --threads-per-job
+overwrite: false
+
+use_totalseg: true  # false reads pseudo_label_dir instead
+pseudo_label_dir:  # empty = work_prefix/totalseg/labels7_flat
+totalseg_device: gpu:0  # gpu:0 or cpu
+
+use_hn_muscles: false  # true paints muscle_tasks into class 3
+muscle_tasks:
+  - head_muscles
+  - headneck_muscles
+
+afp_weight: 1.0  # weight on feature L1
+mae_weight: 0.5  # weight on image L1
+teacher_checkpoint:  # empty = SegScratch checkpoint_best under nnunet_results

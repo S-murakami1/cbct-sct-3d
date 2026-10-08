@@ -1,0 +1,13 @@
+[project]
+name = "cbct-sct-totalseg"
+version = "0.0.0"
+requires-python = ">=3.11"
+dependencies = [
+    "TotalSegmentator",
+    "loguru",
+    "SimpleITK",
+    "matplotlib",
+]
+
+[tool.uv]
+package = false
