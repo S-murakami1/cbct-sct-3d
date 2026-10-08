@@ -61,9 +61,7 @@ uv run nnUNetv2_train 93 3d_fullres 0 -tr nnUNetTrainerMRCT_AFP_scratch300 -p nn
 
 ## Inference and evaluation
 
-These score `imagesTr`. With `test_cases` set, use `imagesTs`. For AFP, use `-tr nnUNetTrainerMRCT_AFP_scratch300` and `pred_afp`.
-
-Predict (still normalized). `--step_size 0.3` reduces patch artifacts. `--rec` is `mean` or `median` (`median` uses a lot of RAM).
+ For AFP, use `-tr nnUNetTrainerMRCT_AFP_scratch300` and `pred_afp`.
 
 ```bash
 uv run nnUNetv2_predict -i raw/Dataset093_Head_CBCT/imagesTr -o results/pred_mae -d 93 -c 3d_fullres -p nnResUNetPlans -tr nnUNetTrainerMRCT_mae_scratch300 -f 0 --disable_tta --rec mean -chk checkpoint_best.pth
