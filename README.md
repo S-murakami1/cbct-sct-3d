@@ -1,6 +1,6 @@
 # cbct-sct-3d
 
-3D CBCT to synthetic CT. `nnunetv2/` is adapted from [nnUNet_translation](https://github.com/phyrise/nnUNet_translation) (clipped CT normalization, one output channel, AFP trainers). `core/` is registration and dataset preparation. Settings are in `config.yaml` (datasets 93 / 94 / 95, `hu_clip`). Patch size, batch size, epochs, and learning rate stay in the trainer and plans.
+3D CBCT to synthetic CT. This repository is built upon [nnUNet_translation](https://github.com/phyrise/nnUNet_translation) 
 
 ## Environment
 
@@ -12,7 +12,7 @@ uv sync
 uv sync --project totalseg
 ```
 
-PyTorch wheels from PyPI include CUDA. TotalSegmentator is a second environment because it loads its own `nnunetv2`; one shared environment would import this translation package. Pseudo labels use `totalseg/.venv`. Training uses `uv sync`.
+TotalSegmentator is a second environment because it loads its own `nnunetv2`; one shared environment would import this translation package. Pseudo labels use `totalseg/.venv`. Training uses `uv sync`.
 
 Elastix 5.2.0 (Linux x86-64) is not in git. Parameters are in `core/synthrad2025_configs`.
 
