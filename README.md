@@ -51,8 +51,6 @@ uv run nnUNetv2_train 93 3d_fullres 0 -tr nnUNetTrainerMRCT_mae_scratch300 -p nn
 
 ## MAE + AFP training
 
-`use_totalseg: false` reads `pseudo_label_dir`. `use_hn_muscles: true` adds head and neck muscles to class 3. An empty `teacher_checkpoint` uses the teacher below.
-
 ```bash
 uv run python core/extract_pseudo_labels.py --config config.yaml
 # 7-class CT teacher (dataset 95). AFP reads its features.
