@@ -64,8 +64,8 @@ Each case is scored inside the geometric CBCT field of view by MAE, PSNR, and NC
 
 ## References
 
-- Longuefosse et al. (2025). Anatomical feature-prioritized loss for enhanced MR to CT translation. *Physics in Medicine & Biology*, 70(14), 145012. https://doi.org/10.1088/1361-6560/adea07
-- Sequeiro Gonzalez et al. (2025). Deep Learning-Based Cross-Anatomy CT Synthesis Using Adapted nnResU-Net with Anatomical Feature Prioritized Loss. arXiv:2509.22394. https://arxiv.org/abs/2509.22394
-- SynthRAD2025 preprocessing (elastix parameter files): https://github.com/SynthRAD2025/preprocessing
-- Longuefosse et al. (2024). Adapted nnU-Net. SASHIMI, pp. 24–33.
-- Isensee et al. (2021). nnU-Net. *Nature Methods*, 18(2), 203–211.
+- **Translation code and MAE baseline.** Longuefosse et al. (2024). Adapted nnU-Net. SASHIMI, pp. 24–33.
+- **Segmentation framework.** Isensee et al. (2021). nnU-Net. *Nature Methods*, 18(2), 203–211.
+- **AFP loss.** Longuefosse et al. (2025). Anatomical feature-prioritized loss for enhanced MR to CT translation. *Physics in Medicine & Biology*, 70(14), 145012. https://doi.org/10.1088/1361-6560/adea07. The feature term there is a mean over layers.
+- **7-class labels and the layer-sum AFP.** Sequeiro Gonzalez et al. (2025). Deep Learning-Based Cross-Anatomy CT Synthesis Using Adapted nnResU-Net with Anatomical Feature Prioritized Loss. arXiv:2509.22394. https://arxiv.org/abs/2509.22394
+- **Elastix parameters.** SynthRAD2025 preprocessing, stage 2. https://github.com/SynthRAD2025/preprocessing
