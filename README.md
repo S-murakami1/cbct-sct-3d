@@ -8,8 +8,8 @@
 curl -LsSf https://astral.sh/uv/install.sh | sh
 cd cbct-sct-3d
 uv python install 3.11
-uv sync
-uv sync --project totalseg
+uv sync --python 3.11
+uv sync --project totalseg --python 3.11
 ```
 
 TotalSegmentator is a second environment because it loads its own `nnunetv2`; one shared environment would import this translation package. Pseudo labels use `totalseg/.venv`. Training uses `uv sync`.
