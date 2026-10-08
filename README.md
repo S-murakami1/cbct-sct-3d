@@ -85,8 +85,12 @@ uv run python core/viz_sct_results.py --pred-dir results/pred_mae_HU --cbct-dir 
 
 ## References
 
-- **Translation code and MAE baseline.** Longuefosse et al. (2024). Adapted nnU-Net. SASHIMI, pp. 24–33. Source of `nnunetv2/`.
-- **Segmentation framework.** Isensee et al. (2021). nnU-Net. *Nature Methods*, 18(2), 203–211. Plans, preprocessing, and the training loop.
-- **AFP loss.** Longuefosse et al. (2025). [Anatomical feature-prioritized loss](https://doi.org/10.1088/1361-6560/adea07). *Phys. Med. Biol.*, 70(14), 145012. The paper averages feature maps over layers; this training sums them.
-- **7-class labels and the AFP sum used here.** Sequeiro Gonzalez et al. (2025). [Cross-anatomy CT synthesis](https://arxiv.org/abs/2509.22394). arXiv:2509.22394. TotalSegmentator grouping and `λ_MAE = 0.5`.
-- **Deformable registration parameters.** [SynthRAD2025/preprocessing](https://github.com/SynthRAD2025/preprocessing), stage 2. Files in `core/synthrad2025_configs`.
+1. Longuefosse et al. "[Adapted nnU-Net: A Robust Baseline for Cross-Modality Synthesis and Medical Image Inpainting](https://doi.org/10.1007/978-3-031-73281-2_3)". *SASHIMI*, 2024.
+
+2. Isensee et al. "[nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation](https://doi.org/10.1038/s41592-020-01008-z)". *Nature Methods*, 2021.
+
+3. Longuefosse et al. "[Anatomical feature-prioritized loss for enhanced MR to CT translation](https://doi.org/10.1088/1361-6560/adea07)". *Physics in Medicine & Biology*, 2025.
+
+4. Sequeiro Gonzalez et al. "[Deep Learning-Based Cross-Anatomy CT Synthesis Using Adapted nnResU-Net with Anatomical Feature Prioritized Loss](https://arxiv.org/abs/2509.22394)". *arXiv*, 2025.
+
+5. https://github.com/SynthRAD2025/preprocessing".
