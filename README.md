@@ -1,3 +1,4 @@
+
 # cbct-sct-3d
 
 3D CBCT to synthetic CT. This repository is built upon [nnUNet_translation](https://github.com/phyrise/nnUNet_translation) 
@@ -58,6 +59,8 @@ uv run nnUNetv2_train 95 3d_fullres 0 -tr nnUNetTrainerSegScratch -p nnUNetPlans
 # MAE + AFP training
 uv run nnUNetv2_train 93 3d_fullres 0 -tr nnUNetTrainerMRCT_AFP_scratch300 -p nnResUNetPlans
 ```
+### Schematic diagram of the `nnUNetTrainerSegScratch` Trainer
+ <img width="4209" height="1560" alt="AFP_figure" src="https://github.com/user-attachments/assets/999dd5ac-9256-4fa2-8bfa-596c96b39639" />
 
 ## Inference and evaluation
 
